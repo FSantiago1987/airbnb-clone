@@ -1,8 +1,24 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Image from "next/image";
 import { SearchIcon, GlobeAltIcon, MenuIcon, UserCircleIcon, UsersIcon } from "@heroicons/react/solid";
+import Navbar from "./Navbar";
 
 function Header() {
+  const [toggle, setToggle] = useState(false);
+  const controlNavbar = () => {
+    if(window.scrollY > 50){
+      setToggle(true)
+    } else {
+      setToggle(false);
+    }
+  }
+
+  useEffect(() =>{
+    window.addEventListener('scroll', controlNavbar);
+    return () => {
+      window.removeEventListener('scroll', controlNavbar);
+    }
+  }, []);
   return (
     <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10">
       <div className="relative flex items-center h-10 cursor-pointer my-auto">
