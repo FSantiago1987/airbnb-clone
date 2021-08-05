@@ -4,12 +4,12 @@ import Navbar from "./Navbar";
 
 function Banner() {
   return (
-    <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[800px]">
+    <div className="relative h-[200px] sm:h-[200px] lg:h-[300px] xl:h-[400px] 2xl:h-[500px] my-24">
       <Image
         src="https://links.papareact.com/0fm"
         layout="fill"
         objectFit="cover"
-        className="absolute top-[-4rem]"
+        className="absolute top-[-4rem] rounded-xl"
       />
       <div className="absolute top-1/2 w-full text-center">
         <p className="text-sm sm:text-lg">Not sure where to go? Pefect.</p>

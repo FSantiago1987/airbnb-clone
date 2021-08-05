@@ -12,7 +12,7 @@ function Navbar() {
   return (
     <>
       <div className="relative top-0 flex h-16 bg-gray-900 items-center justify-center z-50">
-        <p className="text-gray-400 text-[1.05rem] underline">
+        <p className="text-gray-400 text-[1.05rem] underline cursor-pointer">
           Get the latest on our COVID-19 response
         </p>
       </div>
@@ -29,9 +29,9 @@ function Navbar() {
             />
           </div>
           <div className="flex items-center justify-around px-5 text-white text-lg">
-            <p>Places to stay</p>
-            <p>Experiences</p>
-            <p>Online Experiences</p>
+            <p className="cursor-pointer font-semibold">Places to stay</p>
+            <p className="cursor-pointer font-semibold">Experiences</p>
+            <p className="cursor-pointer font-semibold">Online Experiences</p>
           </div>
           <div className="flex items-center space-x-4 justify-end text-white">
             <p className="hidden md:inline cursor-pointer">Become a host</p>
@@ -45,7 +45,7 @@ function Navbar() {
         <div className="flex search-bar w-full items-center justify-center py-3">
             <div className="relative flex items-center md:border-2 rounded-full py-2 md:shadow-sm z-50 w-1/2 bg-white">
             <div className="items-nav flex flex-col flex-grow px-3">
-                <label className="px-5">Location</label>
+                <label className="px-5 font-semibold">Location</label>
                 <input
                 className="pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400"
                 type="text"
@@ -53,7 +53,7 @@ function Navbar() {
                 />
             </div>
             <div className="items-nav flex flex-col flex-grow">
-                <label className="px-5">Check in</label>
+                <label className="px-5 font-semibold">Check in</label>
                 <input
                 className="pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400"
                 type="text"
@@ -61,7 +61,7 @@ function Navbar() {
                 />
             </div>
             <div className="items-nav flex flex-col flex-grow">
-                <label className="px-5">Check out</label>
+                <label className="px-5 font-semibold">Check out</label>
                 <input
                 className="pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400"
                 type="text"
@@ -69,7 +69,7 @@ function Navbar() {
                 />
             </div>
             <div className="items-nav flex flex-col flex-grow">
-                <label className="px-5">Guests</label>
+                <label className="px-5 font-semibold">Guests</label>
                 <input
                 className="pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400"
                 type="text"
