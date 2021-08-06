@@ -12,9 +12,9 @@ import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRangePicker } from "react-date-range";
 import { useRouter } from "next/dist/client/router";
 
-function Header({placeholder}) {
+function Header({placeholder, clicked}) {
   const [toggle, setToggle] = useState(false);
-  const [searchInput, setSearchInput] = useState("");
+  const [searchInput, setSearchInput] = useState(clicked ? " " : "");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [noOfGuests, setNoOfGuests] = useState(1);
@@ -88,7 +88,7 @@ function Header({placeholder}) {
           <UserCircleIcon className="h-6 cursor-pointer" />
         </div>
       </div>
-      {searchInput && (
+      {(searchInput) && (
         <div className="relative flex flex-col col-span-3 mx-auto mt-1">
           <DateRangePicker
             ranges={[selectionRange]}

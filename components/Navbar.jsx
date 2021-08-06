@@ -94,7 +94,7 @@ function Navbar() {
           </div>
         </>
       )}
-      {navbar && <Header />}
+      {navbar && <Header clicked />}
     </>
   );
 }
