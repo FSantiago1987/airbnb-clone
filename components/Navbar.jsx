@@ -55,7 +55,7 @@ function Navbar() {
               </div>
             </div>
             <div className="flex search-bar w-full items-center justify-center py-3" onClick={handleClick}>
-              <div className="relative flex items-center md:border-2 rounded-full py-2 md:shadow-sm z-50 w-1/2 bg-white">
+              <div className="relative flex items-center md:border-2 rounded-full py-2 md:shadow-sm z-50 w-1/2 md:w-3/5 bg-white">
                 <div className="items-nav flex flex-col flex-grow xl:px-3 md:px-2">
                   <label className="px-5 font-semibold">Location</label>
                   <input
