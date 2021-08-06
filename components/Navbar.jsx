@@ -37,14 +37,14 @@ function Navbar() {
             <p className="hidden md:inline cursor-pointer">Become a host</p>
             <GlobeAltIcon className="h-6 cursor-pointer" />
             <div className="flex items-center space-x-2 border-2 p-2 rounded-full bg-white text-gray-400">
-              <MenuIcon className="h-6" />
-              <UserCircleIcon className="h-6" />
+              <MenuIcon className="h-6 cursor-pointer" />
+              <UserCircleIcon className="h-6 cursor-pointer" />
             </div>
           </div>
         </div>
         <div className="flex search-bar w-full items-center justify-center py-3">
             <div className="relative flex items-center md:border-2 rounded-full py-2 md:shadow-sm z-50 w-1/2 bg-white">
-            <div className="items-nav flex flex-col flex-grow px-3">
+            <div className="items-nav flex flex-col flex-grow xl:px-3 md:px-2">
                 <label className="px-5 font-semibold">Location</label>
                 <input
                 className="pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400"
