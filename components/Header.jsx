@@ -76,6 +76,7 @@ function Header({placeholder}) {
           placeholder={placeholder || "Start Your Search"}
           onChange={(e) => setSearchInput(e.target.value)}
           value={searchInput}
+          autofocus 
         />
         <SearchIcon className="hidden md:inline-flex h-8  bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2" />
       </div>
@@ -88,12 +89,14 @@ function Header({placeholder}) {
         </div>
       </div>
       {searchInput && (
-        <div className="flex flex-col col-span-3 mx-auto mt-1">
+        <div className="relative flex flex-col col-span-3 mx-auto mt-1">
           <DateRangePicker
             ranges={[selectionRange]}
             minDate={new Date()}
             rangeColors={["#FD5B61"]}
             onChange={handleSelect}
+            className="w-full"
+            
           />
           <div className="flex items-center border-b mb-4">
             <h2 className="text-2xl flex-grow font-semibold">

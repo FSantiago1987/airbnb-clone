@@ -7,9 +7,11 @@ import Hero from "../components/Hero";
 import LargeCard from "../components/LargeCard";
 import Live from "../components/Live";
 import React, {useState, useEffect} from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Home({ exploreData, liveData }) {
   const [toggle, setToggle] = useState(false);
+  const isMobile = useMediaQuery({maxWidth:"500px"});
   const controlNavbar = () => {
     if(window.scrollY > 100){
       setToggle(true)
@@ -30,7 +32,7 @@ export default function Home({ exploreData, liveData }) {
         <title>Airbnb Clone</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {toggle && <Header className="transition duration-300 ease-in-out" />}
+      {(toggle || isMobile) && <Header className="transition duration-300 ease-in-out" />}
       <Hero />
       <main className="max-w-7xl mx-auto px-8 sm:px-16">
         <Explore exploreData={exploreData} />

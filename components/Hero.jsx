@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import Image from "next/image";
 import Navbar from './Navbar';
-import Header from './Header';
+import { useMediaQuery } from 'react-responsive';
 
 function Hero() {
     const [toggle, setToggle] = useState(false);
+    const isMobile = useMediaQuery({maxWidth:"500px"});
     const controlNavbar = () => {
       if(window.scrollY > 100){
         setToggle(true)
@@ -22,7 +23,7 @@ function Hero() {
     return (
         <div className="Hero relative">
             <div className="navigation">
-                {!toggle && <Navbar className="transition duration-300 ease-out" />}
+                {!toggle && !isMobile && <Navbar className="transition duration-300 ease-out" />}
             </div>
             <div className="h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[800px]">
                 <Image 
